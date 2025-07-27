@@ -1,6 +1,6 @@
 {
   "name": "pluspunkt",
-  "image": "mcr.microsoft.com/devcontainers/python:3.12-node",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
   "forwardPorts": [8000, 5173],
   "postCreateCommand": "pip install -r backend/requirements.txt && cd frontend && npm install",
   "postStartCommand": "uvicorn backend.app.main:app --host 0.0.0.0 --port 8000 & cd frontend && npm run dev -- --host 0.0.0.0 --port 5173 &"
