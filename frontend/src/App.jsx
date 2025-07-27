@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = "http://localhost:8000/employees";
+const API = `${window.location.protocol}//${window.location.hostname.replace("5173", "8000")}/employees`;
 
 export default function App() {
   const [emps, setEmps] = useState([]);
